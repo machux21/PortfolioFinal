@@ -2,56 +2,33 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
 import Modal from "@mui/material/Modal";
-import Typography from "@mui/material/Typography";
+
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "80vw",
-  height: "70vh",
+  width: {xs: "80vw", md: "90vw"},
+  height: "80vh",
   bgcolor: "#15151d",
   border: "none",
   borderRadius: "7px",
   boxShadow: 24,
-  p: 4,
+  p: {xs: 1, md: 4},
+  display: "flex",
+  flexDirection: {xs: "column", md: "row"},
+  overflow: "auto",
 };
 const Card = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
-    <div>
-      {/*<Box
-				sx={{
-					width: { xs: "90vw", md: "23.7vw" },
-					margin: { xs: "5px", md: "7px" },
-					backgroundColor: "#15151d",
-					borderRadius: "7px",
-					overflow: "hidden",
-				}}
-				onClick={handleOpen}
-			>
-				<img
-					style={{ width: "100%", height: "150px" }}
-					src="https://i.ytimg.com/vi/EPyl1LgNtoQ/maxresdefault.jpg"
-					alt="countries_flags"
-				/>
-				<div style={{ padding: "0px 10px 10px 10px" }}>
-					<h3 style={{ color: "#4672fe" }}>Counries App</h3>
-					<p style={{ textAlign: "center" }}>
-						Lorem ipsum dolor sit amet consectetur, adipisicing,
-						elit. Rerum fugit, deserunt, dicta officiis alias cumque
-						quibusdam eligendi velit unde rem neque, similique
-						harum. Totam perspiciatis eveniet officiis iure, autem,
-						temporibus.
-					</p>
-				</div>
-			</Box>*/}
+    <Box>
       <CardContainer>
-        <img src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&amp;fit=crop&amp;w=750&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
-        <div class="info">
-          <h1>Road</h1>
+        <img src="https://cdn.decrypt.co/resize/1024/height/512/wp-content/uploads/2022/03/Ukraine-Flag-gID_4.png" />
+        <div className="info">
+          <h1>Countries</h1>
           <p>
             Lorem Ipsum is simply dummy text from the printing and typeseting
             industry
@@ -67,21 +44,49 @@ const Card = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <Box sx={{ width: {xs: "90%", md:"45%"}, margin: "0 auto"}}>
+            <h1>Text in a modal</h1>
+            <p style={{textAlign: "justify", width: "100%"}}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+              modi fugit placeat in dolor delectus eligendi ea, necessitatibus
+              aperiam voluptates laudantium natus deleniti quaerat. Quasi animi
+              repellat repudiandae magnam! Modi!
+            </p>
+            <div style={{ textAlign: "left" }}>
+              <h2>Features</h2>
+              <ul>
+                <li>React</li>
+                <li>React</li>
+                <li>React</li>
+              </ul>
+            </div>
+            <div style={{ textAlign: "left" }}>
+              <h2>Stack</h2>
+              <ul>
+                <li>React</li>
+                <li>React</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </Box>
+          <Box sx={{ width: {xs: "85%", md:"55%"}, margin: "0 auto"}}>
+            <img
+              style={{ width: "100%", height: "100%"}}
+              src="https://d3qvyul2tp4j8.cloudfront.net/i/VuciF2U4cZ.jpg"
+              alt="ukrain flag"
+            />
+          </Box>
         </Box>
       </Modal>
-    </div>
+    </Box>
   );
 };
 
 const CardContainer = styled("div")`
-  width: 280px;
-  height: 360px;
+  min-width: 200px;
+  max-width: 300px;
+  height: 300px;
+  margin: 15px;
   border-radius: 15px;
   padding: 1.5rem;
   background: white;
@@ -99,6 +104,7 @@ const CardContainer = styled("div")`
   &:hover .info {
     opacity: 1;
     transform: translateY(0px);
+    text-align: center;
   }
   &:before {
     content: "";
@@ -156,4 +162,5 @@ const CardContainer = styled("div")`
     color: white;
   }
 `;
+
 export default Card;

@@ -4,25 +4,24 @@ import {Box} from '@mui/material';
 import 'animate.css';
 const Projects = () => {
 	return (
-
-		<Box
-			className="animate__animated animate__fadeInUp"
-			sx={{
-				mt: {xs: 3, md: 4},
-				width: "100vw",
+		<div
+			style={{
+				
 				margin: "0 auto",
-				overflow: "hidden",
-				p:1,
-				display: "flex",
-				justifyContent: "start",
+				width: "90vw",
+				display: "inline-flex",
+				flexWrap: "wrap",
+				//flexDirection: {xs: "column", sm: "column", md: "row"},
+				justifyContent: "center"
+
 			}}
 		>
-			
 			<Card />
 			<Card />
 			<Card />
 			<Card />
-		</Box>
+			<Card />
+		</div>
 	);
 };
 

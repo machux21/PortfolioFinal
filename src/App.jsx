@@ -5,7 +5,7 @@ import Projects from "./Components/Projects";
 import Navbar from "./Components/Navbar";
 function App() {
   return (
-    <div style={{width: "100vw", height: "100vh"}}>
+    <div>
       <Navbar />
       <div className="bg"></div>
       <div className="bg bg2"></div>
