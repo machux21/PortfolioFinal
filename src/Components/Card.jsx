@@ -44,7 +44,7 @@ const Card = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Box sx={{ width: {xs: "90%", md:"45%"}, margin: "0 auto"}}>
+          <Box sx={{ width: {xs: "90%", md:"45%"}, margin: {xs:"0 auto", md: "0 25px 0 0"}}}>
             <h1>Text in a modal</h1>
             <p style={{textAlign: "justify", width: "100%"}}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit

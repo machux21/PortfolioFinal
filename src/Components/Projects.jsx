@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import {Box} from '@mui/material';
 import 'animate.css';
 const Projects = () => {
 	return (
@@ -12,7 +11,8 @@ const Projects = () => {
 				display: "inline-flex",
 				flexWrap: "wrap",
 				//flexDirection: {xs: "column", sm: "column", md: "row"},
-				justifyContent: "center"
+				justifyContent: "center",
+				marginBottom: "15px"
 
 			}}
 		>

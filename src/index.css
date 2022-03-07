@@ -6,6 +6,46 @@ body {
   margin: 0;
   padding:  0;
 }
+
+.title {
+  background-color: #357ded;
+  margin: 7px;
+  padding: 15px;
+  display: block;
+  color: white; 
+  font-size: 30px; 
+  text-decoration: none;
+  border-radius: 80px;
+}
+.title-inactive {
+  background-color: darkblue;
+  margin: 7px;
+  padding: 15px;
+  display: block;
+  color: white; 
+  font-size: 30px; 
+  text-decoration: none;
+  border-radius: 80px;
+}
+
+.active {
+  background-color: #357ded;
+  margin: 7px;
+  padding: 15px;
+  display: block;
+  color: white; 
+  font-size: 20px; 
+  text-decoration: none;
+  border-radius: 7px;
+}
+.inactive {
+  text-decoration: none; 
+  color: white; 
+  font-size: 20px; 
+  margin: 7px;
+  padding: 15px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
