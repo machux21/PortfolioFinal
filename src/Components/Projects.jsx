@@ -4,6 +4,7 @@ import 'animate.css';
 const Projects = () => {
 	return (
 		<div
+			className="animate__animated animate__fadeInUp"
 			style={{
 				
 				margin: "0 auto",

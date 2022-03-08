@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import validation from "../validation";
-
+import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { iconStyle } from "./About";
+import "animate.css";
 const initialForm = {
 	name: "",
 	email: "",
@@ -50,14 +52,44 @@ const Contact = () => {
 		setForm(initialForm);
 		setErrors(initialForm);
 	};
-	console.log(response);
+
 	return (
 		<Box>
+			<h3>Contact me via</h3>
 			<Box
+				sx={{
+					display: "flex",
+					flexWrap: "wrap",
+					justifyContent: "center",
+				}}
+			>
+				<a
+					href="https://linkedin.com/in/franciscomachucafullstack/"
+					target="_blank"
+				>
+					<SiLinkedin
+						style={{ ...iconStyle, color: "white", margin: "10px" }}
+					/>
+				</a>
+				<a href="https://github.com/machux21" target="_blank">
+				<SiGithub
+					style={{ ...iconStyle, color: "white", margin: "10px" }}
+				/>
+				</a>
+				<a href="https://twitter.com/machux22" target="_blank">
+				<SiTwitter
+					style={{ ...iconStyle, color: "white", margin: "10px" }}
+				/>
+				</a>
+			</Box>
+			<hr style={{width: "50%"}}/>
+			<h3>Or send me a message:</h3>
+			<Box
+				className="animate__animated animate__fadeInUp"
 				sx={{
 					width: { xs: "90vw", md: "50vw" },
 					margin: "0 auto",
-					mt: {xs: 2 , md: 8},
+					mt: { xs: 2, md: 4 },
 				}}
 			>
 				<form
@@ -115,12 +147,10 @@ const Contact = () => {
 						{loading ? "Loading" : "Send"}
 					</Button>
 				</form>
-				{response ? (
-					<SuccessfulMessage>
-						{response.message}
-					</SuccessfulMessage>
-				) : null}
 			</Box>
+			{response ? (
+				<SuccessfulMessage>{response.message}</SuccessfulMessage>
+			) : null}
 		</Box>
 	);
 };
@@ -128,8 +158,10 @@ const Contact = () => {
 export default Contact;
 
 //STYLED COMPONENTS
-const SuccessfulMessage = styled('div')`
-	height: 60px;
+const SuccessfulMessage = styled("div")`
+	position: fixed;
+	bottom: 2%;
+	right: 1%;
 	background-color: green;
 	color: white;
 	padding: 5px;
@@ -137,8 +169,11 @@ const SuccessfulMessage = styled('div')`
 	line-height: 60px;
 	text-align: center;
 	font-size: 20px;
-`
+`;
 const ErrorMessage = styled("p")`
+	position: fixed;
+	bottom: 2%;
+	right: 1%;
 	background-color: #e62020;
 	color: white;
 	font-size: 20px;
@@ -170,7 +205,7 @@ const Button = styled("button")`
 	color: white;
 	transition: 0.2s;
 	&:hover {
-		background-color: #5A92ED;
+		background-color: #5a92ed;
 		color: #192a45;
 		cursor: pointer;
 	}

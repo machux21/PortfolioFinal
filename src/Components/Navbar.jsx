@@ -20,15 +20,15 @@ const Navbar = () => {
       <Box sx={{ display: "flex", justifyContent: "space-around", mx: 2 }}>
         <NavLink
           className={({ isActive }) => isActive ? "active" : "inactive"}
-          to="/contact"
-        >
-          <span>Contact Me</span>
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => isActive ? "active" : "inactive"}
           to="/projects"
         >
           <span>Projects</span>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => isActive ? "active" : "inactive"}
+          to="/contact"
+        >
+          <span>Contact Me</span>
         </NavLink>
       </Box>
     </Box>
