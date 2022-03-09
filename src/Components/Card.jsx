@@ -19,7 +19,7 @@ const style = {
   flexDirection: {xs: "column", md: "row"},
   overflow: "auto",
 };
-const Card = () => {
+const Card = ({title, shortDescription}) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -28,10 +28,9 @@ const Card = () => {
       <CardContainer>
         <img src="https://cdn.decrypt.co/resize/1024/height/512/wp-content/uploads/2022/03/Ukraine-Flag-gID_4.png" />
         <div className="info">
-          <h1>Countries</h1>
+          <h1>{title}</h1>
           <p>
-            Lorem Ipsum is simply dummy text from the printing and typeseting
-            industry
+            {shortDescription}
           </p>
           <button onClick={handleOpen}>Read More</button>
         </div>
@@ -45,12 +44,9 @@ const Card = () => {
       >
         <Box sx={style}>
           <Box sx={{ width: {xs: "90%", md:"45%"}, margin: {xs:"0 auto", md: "0 25px 0 0"}}}>
-            <h1>Text in a modal</h1>
+            <h1>{title}</h1>
             <p style={{textAlign: "justify", width: "100%"}}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-              modi fugit placeat in dolor delectus eligendi ea, necessitatibus
-              aperiam voluptates laudantium natus deleniti quaerat. Quasi animi
-              repellat repudiandae magnam! Modi!
+              {longDescription}
             </p>
             <div style={{ textAlign: "left" }}>
               <h2>Features</h2>

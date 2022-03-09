@@ -1,29 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
 body {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
   box-sizing: border-box;
   color: whitesmoke;
   text-align: center;
   overflow-x: hidden;
   margin: 0;
-  padding:  0;
+  padding: 0;
 }
 
 .title {
+  font-family: 'Sansita Swashed', cursive;
   background-color: #357ded;
+  border: 2px solid skyblue;
   margin: 7px;
   padding: 15px;
   display: block;
-  color: white; 
-  font-size: 30px; 
+  color: white;
+  font-size: 30px;
   text-decoration: none;
   border-radius: 80px;
 }
 .title-inactive {
-  background-color: darkblue;
+  font-family: 'Sansita Swashed', cursive;
+  border: 2px solid lightskyblue;
+  background-color: #15151d;
   margin: 7px;
   padding: 15px;
   display: block;
-  color: white; 
-  font-size: 30px; 
+  color: white;
+  font-size: 30px;
   text-decoration: none;
   border-radius: 80px;
 }
@@ -32,18 +42,18 @@ body {
   background-color: #357ded;
   margin: 7px;
   display: block;
-  color: white; 
-  font-size: 23px; 
+  color: white;
+  font-size: 23px;
   text-decoration: none;
   border-radius: 7px;
   height: 40px;
   line-height: 40px;
-  padding:  5px;
+  padding: 5px;
 }
 .inactive {
-  text-decoration: none; 
-  color: white; 
-  font-size: 20px; 
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
   margin: 7px;
   padding: 15px;
 }
@@ -62,7 +72,7 @@ button {
 }
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, black 50%, #1850AB 50%);
+  background-image: linear-gradient(-60deg, black 50%, #1850ab 50%);
   bottom: 0;
   left: -50%;
   opacity: 0.5;

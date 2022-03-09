@@ -55,7 +55,7 @@ const Contact = () => {
 
 	return (
 		<Box>
-			<h3>Contact me via</h3>
+			<h3>Contact me via:</h3>
 			<Box
 				sx={{
 					display: "flex",
@@ -82,7 +82,7 @@ const Contact = () => {
 				/>
 				</a>
 			</Box>
-			<hr style={{width: "50%"}}/>
+			<hr style={{width: "50%", color: "white"}}/>
 			<h3>Or send me a message:</h3>
 			<Box
 				className="animate__animated animate__fadeInUp"
@@ -144,7 +144,7 @@ const Contact = () => {
 						}
 						type="submit"
 					>
-						{loading ? "Loading" : "Send"}
+						{loading ? "Loading..." : "Send"}
 					</Button>
 				</form>
 			</Box>
@@ -155,25 +155,22 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+
 
 //STYLED COMPONENTS
 const SuccessfulMessage = styled("div")`
 	position: fixed;
 	bottom: 2%;
 	right: 1%;
-	background-color: green;
+	background-color: #33bb5e;
 	color: white;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 8px;
 	line-height: 60px;
 	text-align: center;
 	font-size: 20px;
 `;
 const ErrorMessage = styled("p")`
-	position: fixed;
-	bottom: 2%;
-	right: 1%;
 	background-color: #e62020;
 	color: white;
 	font-size: 20px;
@@ -216,10 +213,11 @@ const Button = styled("button")`
 	}
 `;
 const Textarea = styled("textarea")`
+	font-family: 'Roboto Mono', monospace;
 	border-radius: 10px;
 	border: none;
 	resize: none;
-	padding: 10px;
+	padding: 20px;
 	margin-top: 10px;
 	font-family: arial;
 	font-size: 16px;
@@ -228,3 +226,4 @@ const Textarea = styled("textarea")`
 		border: 3px solid lightblue;
 	}
 `;
+export default Contact;

@@ -14,7 +14,7 @@ const Navbar = () => {
       }}
     >
       <NavLink className={({ isActive }) => isActive ? "title" : "title-inactive"} to="/">
-        <span>MachuxDEV</span>
+        <span>MachuxDev</span>
       </NavLink>
 
       <Box sx={{ display: "flex", justifyContent: "space-around", mx: 2 }}>

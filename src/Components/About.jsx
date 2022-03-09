@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from "./About.module.css";
-import { Box } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
 import {
 	SiReact,
 	SiRedux,
@@ -13,11 +13,11 @@ import {
 	SiGithub,
 	SiPostgresql,
 	SiStyledcomponents,
-	SiExpress
+	SiExpress,
 } from "react-icons/si";
-import {Link} from 'react-router-dom'
+
 import { FaNode } from "react-icons/fa";
-export const iconStyle = {width: "60px", height: "60px"}
+export const iconStyle = { width: "60px", height: "60px" };
 const About = () => {
 	return (
 		<Box>
@@ -44,8 +44,8 @@ const About = () => {
 			<Box
 				sx={{
 					position: "absolute",
-					top: "50%",
-					
+					top: { xs: "42%", md: "46%" },
+
 					margin: "0 auto",
 					textAlign: "center",
 				}}
@@ -56,28 +56,99 @@ const About = () => {
 				</h3>
 				<p>Technologies</p>
 				<Box
-					sx={{width: "100vw",display: "flex", flexWrap: "wrap", justifyContent:"space-around"}}
+					sx={{
+						width: "100vw",
+						m: { xs: 1, md: 0 },
+						display: "flex",
+						flexWrap: "wrap",
+						justifyContent: "space-around",
+					}}
 				>
-					<SiGit style={{...iconStyle, color: "orangered"}}/>
-					<SiGithub style={{...iconStyle, color: "white"}} />
-					<SiHtml5 style={{...iconStyle, color: "orange"}}/>
-					<SiCss3 style={{...iconStyle, color: "#006fb4"}}/>
-					<SiJavascript style={{...iconStyle, color: "yellow"}} />
-					<SiReact style={{...iconStyle, color: "#61dbfb"}}/>
-					<SiRedux style={{...iconStyle, color: "violet"}}/>
-					<SiMaterialui style={{...iconStyle, color: "blue"}}/>
-					<SiStyledcomponents style={{...iconStyle, color: "pink"}}/>
-					<FaNode style={{...iconStyle, color: "darkgreen"}}/>
-					<SiExpress style={{...iconStyle, color: "white"}}/>
-					<SiSequelize style={{...iconStyle, color: "blue"}}/>
-					<SiPostgresql style={{...iconStyle, color: "lightblue"}}/>
+					<Tooltip title="Git">
+						<div>
+							<SiGit
+								style={{ ...iconStyle, color: "orangered" }}
+							/>
+						</div>
+					</Tooltip>
+
+					<Tooltip title="GitHub">
+						<div>
+						<SiGithub style={{ ...iconStyle, color: "white" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="HTML5">
+						<div>
+							
+						<SiHtml5 style={{ ...iconStyle, color: "orange" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="CSS3">
+						<div>
+						<SiCss3 style={{ ...iconStyle, color: "#006fb4" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="JavaScript">
+						<div>
+						<SiJavascript
+							style={{ ...iconStyle, color: "yellow" }}
+						/>
+						</div>
+					</Tooltip>
+
+					<Tooltip title="React">
+						<div>
+						<SiReact style={{ ...iconStyle, color: "#61dbfb" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="Redux">
+						<div>
+						<SiRedux style={{ ...iconStyle, color: "violet" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="Material UI">
+						<div>
+						<SiMaterialui style={{ ...iconStyle, color: "blue" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="Styled Components">
+						<div>
+						<SiStyledcomponents
+							style={{ ...iconStyle, color: "pink" }}
+						/>
+						</div>
+					</Tooltip>
+					<Tooltip title="NodeJS">
+						<div>
+						<FaNode style={{ ...iconStyle, color: "darkgreen" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="Express">
+						<div>
+						<SiExpress style={{ ...iconStyle, color: "white" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="Sequelize">
+						<div>
+						<SiSequelize style={{ ...iconStyle, color: "blue" }} />
+						</div>
+					</Tooltip>
+					<Tooltip title="PostgreSQL">
+						<div>
+						<SiPostgresql
+							style={{ ...iconStyle, color: "lightblue" }}
+						/>
+						</div>
+					</Tooltip>
 				</Box>
 				<h3>About Me</h3>
 				<p>
 					I started in this world beacuse I watch the movie The Social
 					Media XD
 				</p>
-				<a href="../FranciscoMachucaResume.pdf" target="_blank" download>Download CV</a>
+				<a href="../FranciscoMachucaResume.pdf" target="_blank">
+					Download CV
+				</a>
 			</Box>
 		</Box>
 	);
