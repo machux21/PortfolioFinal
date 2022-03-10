@@ -8,30 +8,37 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: {xs: "80vw", md: "90vw"},
+  width: { xs: "80vw", md: "90vw" },
   height: "80vh",
   bgcolor: "#15151d",
   border: "none",
   borderRadius: "7px",
   boxShadow: 24,
-  p: {xs: 1, md: 4},
+  p: { xs: 1, md: 4 },
   display: "flex",
-  flexDirection: {xs: "column", md: "row"},
+  flexDirection: { xs: "column", md: "row" },
   overflow: "auto",
 };
-const Card = ({title, shortDescription}) => {
+const Card = ({
+  title,
+  shortDescription,
+  longDescription,
+  coverPage,
+  features,
+  stack,
+  link,
+  img,
+}) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
     <Box>
       <CardContainer>
-        <img src="https://cdn.decrypt.co/resize/1024/height/512/wp-content/uploads/2022/03/Ukraine-Flag-gID_4.png" />
+        <img src={coverPage} />
         <div className="info">
           <h1>{title}</h1>
-          <p>
-            {shortDescription}
-          </p>
+          <p>{shortDescription}</p>
           <button onClick={handleOpen}>Read More</button>
         </div>
       </CardContainer>
@@ -43,41 +50,69 @@ const Card = ({title, shortDescription}) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Box sx={{ width: {xs: "90%", md:"45%"}, margin: {xs:"0 auto", md: "0 25px 0 0"}}}>
+          <Box
+            sx={{
+              width: { xs: "90%", md: "45%" },
+              margin: { xs: "0 auto", md: "0 20px 0 0" },
+              pr: {md: 1},
+              overflow: {md: "scroll"}
+            }}
+          >
             <h1>{title}</h1>
-            <p style={{textAlign: "justify", width: "100%"}}>
+            <p style={{ textAlign: "justify", width: "100%" }}>
               {longDescription}
             </p>
             <div style={{ textAlign: "left" }}>
               <h2>Features</h2>
               <ul>
-                <li>React</li>
-                <li>React</li>
-                <li>React</li>
+                {features.map((f, i) => {
+                  return <li key={i}>{f}</li>;
+                })}
               </ul>
             </div>
             <div style={{ textAlign: "left" }}>
               <h2>Stack</h2>
               <ul>
-                <li>React</li>
-                <li>React</li>
-                <li>React</li>
+                {stack.map((f, i) => {
+                  return <li key={i}>{f}</li>;
+                })}
               </ul>
             </div>
+            <LinkButton
+              href={link}
+              target="_blank"
+            >
+              Go to {title}
+            </LinkButton>
           </Box>
-          <Box sx={{ width: {xs: "85%", md:"55%"}, margin: "0 auto"}}>
-            <img
-              style={{ width: "100%", height: "100%"}}
-              src="https://d3qvyul2tp4j8.cloudfront.net/i/VuciF2U4cZ.jpg"
-              alt="ukrain flag"
-            />
+          <Box sx={{ width: { xs: "85%", md: "55%" }, margin: "0 auto"}}>
+            <a href={link} target="_blank">
+              <img
+                style={{ width: "100%", height: "100%", margin: "0 auto" }}
+                src={img}
+                alt={title}
+              />
+            </a>
           </Box>
         </Box>
       </Modal>
     </Box>
   );
 };
-
+const LinkButton = styled("a")`
+  margin: 12px auto;
+  text-decoration: none;
+  display: block;
+  background-color: #357ded;
+  color: white;
+  width: auto;
+  border-radius: 7px;
+  height: 50px;
+  line-height: 50px;
+  &:hover{
+    background-color: lightblue;
+  }
+`
 const CardContainer = styled("div")`
   min-width: 200px;
   max-width: 300px;
@@ -146,15 +181,15 @@ const CardContainer = styled("div")`
     padding: 0.6rem;
     outline: none;
     border: none;
-    border-radius: 3px;
-    background: white;
-    color: black;
+    border-radius: 7px;
+    background: #357ded;
+    color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s ease;
   }
   .info button:hover {
-    background: dodgerblue;
+    background: lightblue;
     color: white;
   }
 `;

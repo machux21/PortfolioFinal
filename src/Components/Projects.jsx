@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import data from '../projectsData';
 import 'animate.css';
 const Projects = () => {
 	return (
@@ -17,11 +18,20 @@ const Projects = () => {
 
 			}}
 		>
-			<Card />
-			<Card />
-			<Card />
-			<Card />
-			<Card />
+		{data.map((d, i)=>(
+
+			<Card 
+				key={i} 
+				title={d.title}
+				longDescription={d.longDescription}
+				shortDescription={d.shortDescription}
+				coverPage={d.coverPage}
+				features={d.features}
+				stack={d.stack}
+				link={d.link}
+				img={d.img}
+				/>
+			))}
 		</div>
 	);
 };
