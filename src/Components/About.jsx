@@ -50,11 +50,11 @@ const About = () => {
 					textAlign: "center",
 				}}
 			>
-				<h3>
+				<span style={{fontSize: "25px"}}>
 					I am Francisco Machuca, a Full Stack Developer especialized
-					in React and React Native
-				</h3>
-				<p>Technologies</p>
+					in React and Node.js
+				</span>
+				<h2 style={{color: "lightblue"}}>Technologies:</h2>
 				<Box
 					sx={{
 						width: "100vw",
@@ -141,7 +141,7 @@ const About = () => {
 						</div>
 					</Tooltip>
 				</Box>
-				<h3>About Me</h3>
+				<h2>About Me:</h2>
 				<p>
 					I started in this world beacuse I watch the movie The Social
 					Media XD
