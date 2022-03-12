@@ -15,7 +15,8 @@ import {
 	SiStyledcomponents,
 	SiExpress,
 } from "react-icons/si";
-
+import Certificate from "../certificate.png";
+import Machux from "../machux.jpg";
 import { FaNode } from "react-icons/fa";
 export const iconStyle = { width: "60px", height: "60px" };
 const About = () => {
@@ -50,11 +51,11 @@ const About = () => {
 					textAlign: "center",
 				}}
 			>
-				<span style={{fontSize: "25px"}}>
-					I am Francisco Machuca, a Full Stack Developer especialized
+				<span style={{ fontSize: "25px" }}>
+					I am Francisco Machuca, a Full Stack Developer specialized
 					in React and Node.js
 				</span>
-				<h2 style={{color: "lightblue"}}>Technologies:</h2>
+				<h2 style={{ color: "lightblue" }}>Technologies:</h2>
 				<Box
 					sx={{
 						width: "100vw",
@@ -74,78 +75,133 @@ const About = () => {
 
 					<Tooltip title="GitHub">
 						<div>
-						<SiGithub style={{ ...iconStyle, color: "white" }} />
+							<SiGithub
+								style={{ ...iconStyle, color: "white" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="HTML5">
 						<div>
-							
-						<SiHtml5 style={{ ...iconStyle, color: "orange" }} />
+							<SiHtml5
+								style={{ ...iconStyle, color: "orange" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="CSS3">
 						<div>
-						<SiCss3 style={{ ...iconStyle, color: "#006fb4" }} />
+							<SiCss3
+								style={{ ...iconStyle, color: "#006fb4" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="JavaScript">
 						<div>
-						<SiJavascript
-							style={{ ...iconStyle, color: "yellow" }}
-						/>
+							<SiJavascript
+								style={{ ...iconStyle, color: "yellow" }}
+							/>
 						</div>
 					</Tooltip>
 
 					<Tooltip title="React">
 						<div>
-						<SiReact style={{ ...iconStyle, color: "#61dbfb" }} />
+							<SiReact
+								style={{ ...iconStyle, color: "#61dbfb" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="Redux">
 						<div>
-						<SiRedux style={{ ...iconStyle, color: "violet" }} />
+							<SiRedux
+								style={{ ...iconStyle, color: "violet" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="Material UI">
 						<div>
-						<SiMaterialui style={{ ...iconStyle, color: "blue" }} />
+							<SiMaterialui
+								style={{ ...iconStyle, color: "blue" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="Styled Components">
 						<div>
-						<SiStyledcomponents
-							style={{ ...iconStyle, color: "pink" }}
-						/>
+							<SiStyledcomponents
+								style={{ ...iconStyle, color: "pink" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="NodeJS">
 						<div>
-						<FaNode style={{ ...iconStyle, color: "darkgreen" }} />
+							<FaNode
+								style={{ ...iconStyle, color: "darkgreen" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="Express">
 						<div>
-						<SiExpress style={{ ...iconStyle, color: "white" }} />
+							<SiExpress
+								style={{ ...iconStyle, color: "white" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="Sequelize">
 						<div>
-						<SiSequelize style={{ ...iconStyle, color: "blue" }} />
+							<SiSequelize
+								style={{ ...iconStyle, color: "blue" }}
+							/>
 						</div>
 					</Tooltip>
 					<Tooltip title="PostgreSQL">
 						<div>
-						<SiPostgresql
-							style={{ ...iconStyle, color: "lightblue" }}
-						/>
+							<SiPostgresql
+								style={{ ...iconStyle, color: "lightblue" }}
+							/>
 						</div>
 					</Tooltip>
 				</Box>
 				<h2>About Me:</h2>
-				<p>
-					I started in this world beacuse I watch the movie The Social
-					Media XD
+				<Box sx={{width: "200px", height: "200px", overflow: "hidden", margin: "0 auto"}}>
+					<Tooltip title="Me in Nahuel Huapi Lake, Bariloche, Argentina">
+					<img style={{width: "200px", height: "200px", margin: "0 auto", borderRadius: "100px"}} src={Machux} alt="Francisco" />
+					</Tooltip>
+				</Box>
+				
+				<p
+					style={{
+						padding: "15px",
+						margin: "4%",
+						fontSize: "25px",
+						fontStyle: "italic",
+						fontWeight: "400",
+						textAlign: "justify",
+						borderRadius: "7px",
+						backgroundColor: "#15151d",
+					}}
+				>
+					"Well, where to start... I'm 21 years old and I'm from
+					Argentina. My beginnings in programming were thanks to the
+					movie The Social Media. I was interested in how a single
+					student with a great idea and a computer created a social
+					network that allowed us to communicate from anywhere in the
+					world. It inspired me so much that I decided to quit my
+					medical studies and start studying computer science at
+					university. I am now in my second year and five months ago I
+					finished the Soy Henry programming bootcamp. Thanks to my
+					perseverance and discipline I am now a Full Stack Web
+					developer and I am on my way to find my great idea to
+					contribute to the world."
 				</p>
+				<p style={{ fontSize: "25px" }}>
+					I show you my certificate of which I am very proud:
+				</p>
+				<Box
+					sx={{
+						width: { xs: "80vw", md: "60vw" },
+						margin: "10px auto",
+					}}
+				>
+					<img style={{}} src={Certificate} alt="Certificate" />
+				</Box>
 				<a href="../FranciscoMachucaResume.pdf" target="_blank">
 					Download CV
 				</a>
