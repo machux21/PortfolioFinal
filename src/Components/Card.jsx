@@ -55,7 +55,8 @@ const Card = ({
               width: { xs: "90%", md: "45%" },
               margin: { xs: "0 auto", md: "0 20px 0 0" },
               pr: {md: 1},
-              overflow: {md: "scroll"}
+              overflowY: {md: "scroll"},
+
             }}
           >
             <h1>{title}</h1>

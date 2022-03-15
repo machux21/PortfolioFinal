@@ -22,7 +22,7 @@ const data = [
 			"Add tourist activities",
 		],
 		link: "https://countries-app-2022.vercel.app/",
-		img: "https://image.shutterstock.com/image-vector/people-different-nationalities-countries-on-600w-322645226.jpg",
+		img: "https://media.istockphoto.com/photos/multi-ethnic-people-portraits-and-national-flags-picture-id510075292?k=6&m=510075292&s=612x612&w=0&h=OcuwVEPipLvMnQwc0-HbQX5QzB8NjOfBEw7l6LR9w1g=",
 		coverPage: "https://cdn.decrypt.co/resize/1024/height/512/wp-content/uploads/2022/03/Ukraine-Flag-gID_4.png"
 	},
 	{
@@ -55,7 +55,7 @@ const data = [
 			"Read mangas",
 			"The option to buy a single manga or the complete colection",
 		],
-		link: "https://countries-app-2022.vercel.app/home",
+		link: "https://deploy-client-kappa.vercel.app",
 		img: "https://img.interempresas.net/fotos/2721187.png",
 		coverPage: "https://www.japonalternativo.com/wp-content/uploads/2021/12/mejor-dibujante-manga-naruto.jpg"
 	},
