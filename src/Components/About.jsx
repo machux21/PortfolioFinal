@@ -18,6 +18,7 @@ import {
 } from "react-icons/si";
 import Certificate from "../certificate.png";
 import Machux from "../machux.jpg";
+import Resume from '../FranciscoMachucaResume.pdf'
 import { FaNode } from "react-icons/fa";
 export const iconStyle = { width: "60px", height: "60px" };
 const About = () => {
@@ -160,8 +161,8 @@ const About = () => {
 						</div>
 					</Tooltip>
 				</Box>
-				<LinkButton href="../FranciscoMachucaResume.pdf" target="_blank">
-					Download CV
+				<LinkButton href={Resume} download>
+					Download Resume
 				</LinkButton>
 				<Box sx={{ mt: 4 }}>
 					<h1>About Me:</h1>
@@ -240,7 +241,7 @@ const LinkButton = styled("a")`
   display: block;
   background-color: #357ded;
   color: white;
-  width: 150px;
+  width: 180px;
   border-radius: 7px;
   height: 50px;
   line-height: 50px;
