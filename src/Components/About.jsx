@@ -48,7 +48,6 @@ const About = () => {
 				sx={{
 					position: "absolute",
 					top: { xs: "42%", md: "46%" },
-
 					margin: "0 auto",
 					textAlign: "center",
 				}}
@@ -60,7 +59,7 @@ const About = () => {
 				<h1>Technologies:</h1>
 				<Box
 					sx={{
-						width: "100vw",
+						width: "95vw",
 						m: { xs: 1, md: 0 },
 						display: "flex",
 						flexWrap: "wrap",
@@ -194,7 +193,7 @@ const About = () => {
 							fontSize: "25px",
 							p: 2,
 							width: { xs: "90vw", md: "79vw" },
-							margin: "20px auto",
+							margin: "0 auto",
 							borderRadius: "7px",
 						}}
 					>

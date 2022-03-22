@@ -10,7 +10,7 @@ const Navbar = () => {
         margin: "0 auto",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        justifyContent: {xs: "center, md:"space-between" },
+        justifyContent: { xs: "center", md: "space-between" },
       }}
     >
       <NavLink
