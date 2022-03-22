@@ -52,7 +52,7 @@ const About = () => {
 					textAlign: "center",
 				}}
 			>
-				<span style={{ fontSize: "25px" }}>
+				<span style={{ fontSize: "25px", alignText: "center", margin: "0 auto" }}>
 					I am Francisco Machuca, a Full Stack Developer specialized
 					in React and Node.js
 				</span>
@@ -60,7 +60,7 @@ const About = () => {
 				<Box
 					sx={{
 						width: "95vw",
-						m: { xs: 1, md: 0 },
+						margin: "0 auto"
 						display: "flex",
 						flexWrap: "wrap",
 						justifyContent: "space-around",
