@@ -65,6 +65,7 @@ const About = () => {
 						display: "flex",
 						flexWrap: "wrap",
 						justifyContent: "space-around",
+						p: {xs: 2, md: 1}
 					}}
 				>
 					<Tooltip title="Git">

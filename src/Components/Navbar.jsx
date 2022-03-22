@@ -25,7 +25,7 @@ const Navbar = () => {
           display: "flex",
           justifyContent: "space-around",
           mx: 2,
-          mt: { xs: 3, md: 0 },
+          mt: { xs: 1, md: 0 },
         }}
       >
         <NavLink
