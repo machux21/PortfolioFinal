@@ -1,8 +1,7 @@
 const data = [
 	{
 		title: "Countries App",
-		shortDescription:
-			"A educational Countries app",
+		shortDescription: "A educational Countries app",
 		longDescription:
 			"This is an educational web application about countries and their geography. It shows a brief description of all the countries in the world and you can add tourist activities specific to each country.",
 		stack: [
@@ -23,7 +22,8 @@ const data = [
 		],
 		link: "https://countries-app-2022.vercel.app/",
 		img: "https://media.istockphoto.com/photos/multi-ethnic-people-portraits-and-national-flags-picture-id510075292?k=6&m=510075292&s=612x612&w=0&h=OcuwVEPipLvMnQwc0-HbQX5QzB8NjOfBEw7l6LR9w1g=",
-		coverPage: "https://cdn.decrypt.co/resize/1024/height/512/wp-content/uploads/2022/03/Ukraine-Flag-gID_4.png"
+		coverPage:
+			"https://cdn.decrypt.co/resize/1024/height/512/wp-content/uploads/2022/03/Ukraine-Flag-gID_4.png",
 	},
 	{
 		title: "Mangaka",
@@ -57,7 +57,40 @@ const data = [
 		],
 		link: "https://deploy-client-kappa.vercel.app",
 		img: "https://img.interempresas.net/fotos/2721187.png",
-		coverPage: "https://www.japonalternativo.com/wp-content/uploads/2021/12/mejor-dibujante-manga-naruto.jpg"
+		coverPage:
+			"https://www.japonalternativo.com/wp-content/uploads/2021/12/mejor-dibujante-manga-naruto.jpg",
+	},
+	{
+		title: "Products App",
+		shortDescription: "An aplication to create and manage products",
+		longDescription:
+			"A Full Stack application with Node and React with an Admin section to manage the products of an ecommerce. From this admin section you can work with all CRUD operations.",
+		stack: [
+			"JavaScript",
+			"React",
+			"Axios",
+			"React Router",
+			"Styled-Components",
+			"NodeJS",
+			"Express",
+			"JSON Web Tokens",
+			"Sequelize",
+			"Postgres",
+		],
+		features: [
+			"Product Detail",
+			"Pagination",
+			"Create Products and Brands",
+			"Delete products and brands",
+			"Update products and brands",
+			"Get all products",
+			"Login",
+			"Register",
+		],
+		link: "https://friendly-khorana-d46c86.netlify.app/",
+		img: "https://media-exp1.licdn.com/dms/image/C4D22AQFDmiwWU8iFvA/feedshare-shrink_480/0/1648600676098?e=1651708800&v=beta&t=DvBGjAzqX9WajgGFDmg79b68jt6my2jnSBVxkrULcEY",
+		coverPage:
+			"https://www.loclweb.com/wp-content/uploads/2018/04/local-business-ecommerce-website.png",
 	},
 ];
 export default data;
