@@ -88,7 +88,7 @@ const data = [
 			"Register",
 		],
 		link: "https://friendly-khorana-d46c86.netlify.app/",
-		img: "https://media-exp1.licdn.com/dms/image/C4D22AQFDmiwWU8iFvA/feedshare-shrink_480/0/1648600676098?e=1651708800&v=beta&t=DvBGjAzqX9WajgGFDmg79b68jt6my2jnSBVxkrULcEY",
+		img: "https://www.conversific.com/wp-content/uploads/2020/03/ecommerce_1280x717-1024x574.jpg",
 		coverPage:
 			"https://www.loclweb.com/wp-content/uploads/2018/04/local-business-ecommerce-website.png",
 	},
